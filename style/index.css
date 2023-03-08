@@ -1,1 +1,100 @@
 /* CSS stillerinizi buraya girin */
+/* {
+  border: 1px solid limegreen;
+  background-color: rgba(116, 116, 116, 0.1);
+}
+
+body {
+  margin: 0;
+}*/
+
+.containerClamp {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  /*padding-top: 10px;*/
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+}
+
+.header h1 {
+  margin-left: 50px;
+}
+
+.menu ul li {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: darkslategrey;
+  text-transform: uppercase;
+}
+
+.menu ul li.menu--active {
+  background-color: tomato;
+}
+
+.menu ul li:hover {
+  background-color: rgb(149, 137, 222);
+}
+
+.menu ul li a {
+  color: wheat;
+  text-decoration: none;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px auto;
+}
+.about__content {
+  /* display: inline-block; */
+  margin-top: auto;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+button {
+  padding: 12px 40px;
+  border-style: groove;
+}
+
+.projects {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.projects__item {
+  /* display: inline-block; */
+  margin-bottom: 20px;
+  background-color: rgb(156, 126, 148);
+}
+
+.projects__item p {
+  /* display: inline-block; */
+  text-align: center;
+}
+
+.project__image {
+  /*background-color: tomato;*/
+  width: 200px;
+}
+
+.footer {
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.footer__cta {
+  display: inline-block;
+  text-align: center;
+}
