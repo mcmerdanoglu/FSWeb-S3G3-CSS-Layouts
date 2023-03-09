@@ -1,0 +1,176 @@
+/* CSS stillerinizi buraya girin */ /*Responsive design CSS*/
+/* * {
+  border: 1px solid limegreen;
+  background-color: rgba(116, 116, 116, 0.1);
+} */
+
+.containerClamp {
+  /* width: 900px; media query içine taşındı */
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+}
+
+.menu ul {
+  /*default olarak 40px veriyordu onu düzeltmek için 0'landı.*/
+  padding-inline-start: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: darkslategrey;
+  text-transform: uppercase;
+}
+
+.menu ul li.menu--active {
+  background-color: tomato;
+}
+
+.menu ul li:hover {
+  background-color: darkblue;
+}
+
+.menu ul li a {
+  color: wheat;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px auto;
+}
+.about__content {
+  /* display: inline-block; */
+  margin-top: auto;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  min-width: 200px;
+  max-width: 400px;
+}
+.projects {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.projects__item {
+  /* display: inline-block; */
+  margin-bottom: 20px;
+  background-color: rgb(156, 126, 148);
+  text-align: center;
+}
+
+.project__image {
+  /*background-color: tomato;*/
+  width: 200px;
+}
+
+.footer {
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.footer__cta {
+  display: inline-block;
+  text-align: center;
+}
+
+/* Extra small devices (phones, 500px and down) */
+@media only screen and (max-width: 500px) {
+  /* body {
+    background-color: rgba(100, 149, 237, 0.9);
+  } */
+
+  .header h1 {
+    /*öğeyi ortalayabilmek için media içine alındı ve marjin 0'landı*/
+    margin-left: 0;
+    text-align: center;
+  }
+  .menu {
+    /*öğeyi ortalayabilmek için media içine alındı*/
+    text-align: center;
+  }
+  .menu ul li {
+    /*öğelerin blok gibi davaranarak alt alta hizalanması için media içine alındı*/
+    display: block;
+  }
+
+  .about {
+    /*sınıf içeriğini topluca ortalayabilmek için media içine alındı*/
+    justify-content: center;
+  }
+  .about__content {
+    /*içeriği ortalayabilmek için media içine alındı*/
+    padding: 0;
+    text-align: center;
+  }
+
+  .about__content p {
+    /*paragrafları sola yaslamak için media içine alındı*/
+    text-align: left;
+  }
+
+  .projects__item {
+    /* display: inline-block; */
+    width: 40%; /*küçüldükçe tek elemana düşerek sütun oluşturmaması için bu değer verildi. Bu sayede 2 resim beraberce satırı paylaşıyorlar. */
+  }
+
+  .project__image {
+    /*background-color: tomato;*/
+    width: 100%; /*resim küçülürken içeriksel boyutunu koruması için bu değer verildi*/
+  }
+
+  .projects {
+    /*küçülürken boşlukların dengeleri olması için bu değerler verildi*/
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+}
+
+/* Medium devices (landscape phones and portraid tablets, 900px and up) */
+/* @media only screen and (min-width: 500px) { */
+@media only screen and (min-width: 500px) and (max-width: 900px) {
+  /* body {
+    background-color: rgba(255, 165, 0, 0.9);
+  } */
+  .projects {
+    gap: 30px;
+    justify-content: space-evenly;
+  }
+
+  .about {
+    flex-wrap: nowrap; /*paragrafı alta geçirmemek ve olabildiğince bulunduğu yere sığdırmak amacıyla sağda kalması için bu şekilde yazıldı.*/
+  }
+
+  .about__content {
+    /*içeriğin kendi özgül değerini koruyarak ekrandan çıkmaması için verildi.*/
+    min-width: initial;
+    max-width: initial;
+  }
+}
+
+/* Medium devices (laptops/desktops, 900px and up) */
+@media only screen and (min-width: 900px) {
+  /* body {
+    background-color: rgba(255, 99, 71, 0.9);
+  } */
+  .containerClamp {
+    /*standart ve üstü monitörlerde gösterilmek istenen ekran boyutu containerda verilerek en genel alan sınırlandırması media içinde ilgili bölüme taşındı*/
+    width: 900px;
+  }
+}
+/*
+        0px                    500px                   800px                       sonsuz1200
+            telefon ekranı            tablet Ekranı           Bilgisayar ekranı 
+    */
+
+/*        <50         0                >500 && <800                     >800           */
